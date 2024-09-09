@@ -1,6 +1,24 @@
 import Navbar from '@/components/Navbar';
-
 import { FaTelegramPlane, FaInstagram, FaTiktok } from 'react-icons/fa';
+import Footer from './footer';
+
+const socialLinks = [
+  {
+    href: "https://t.me/cybersmart",
+    icon: <FaTelegramPlane />,
+    label: "Telegram",
+  },
+  {
+    href: "https://www.instagram.com/cybersmart",
+    icon: <FaInstagram />,
+    label: "Instagram",
+  },
+  {
+    href: "https://www.tiktok.com/@cybersmart",
+    icon: <FaTiktok />,
+    label: "TikTok",
+  },
+];
 
 export default function Social() {
   return (
@@ -12,36 +30,23 @@ export default function Social() {
           Follow us on social media and become a part of the Cyber Smart community!
         </p>
 
-       
-        <div className="flex justify-center space-x-12">
-          <a
-            href="https://t.me/cybersmart"
-            target="_blank"
-            className="text-5xl text-orange-400 hover:text-orange-300 transition duration-300 ease-in-out"
-          >
-            <FaTelegramPlane />
-            <p className="text-sm mt-2">Telegram</p>
-          </a>
-          
-          <a
-            href="https://www.instagram.com/cybersmart"
-            target="_blank"
-            className="text-5xl text-orange-400 hover:text-orange-300 transition duration-300 ease-in-out"
-          >
-            <FaInstagram />
-            <p className="text-sm mt-2">Instagram</p>
-          </a>
-         
-          <a
-            href="https://www.tiktok.com/@cybersmart"
-            target="_blank"
-            className="text-5xl text-orange-400 hover:text-orange-300 transition duration-300 ease-in-out"
-          >
-            <FaTiktok />
-            <p className="text-sm mt-2">TikTok</p>
-          </a>
+        <div className="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-12">
+          {socialLinks.map(({ href, icon, label }, index) => (
+            <a
+              key={index}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center text-5xl text-orange-400 hover:text-orange-300 transition duration-300 ease-in-out transform hover:scale-110"
+              aria-label={`Follow us on ${label}`}
+            >
+              {icon}
+              <p className="text-sm mt-2">{label}</p>
+            </a>
+          ))}
         </div>
       </div>
+      <Footer />
     </section>
   );
 }

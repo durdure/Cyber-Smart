@@ -1,11 +1,14 @@
-
 import Navbar from '../components/Navbar';
 import Footer from './footer';
+import Head from 'next/head';
 export default function Home() {
   return (
     <div>
+      <Head>
+        <title>Cyber Smart Community</title>
+        <meta name="description" content="Empowering individuals through digital literacy and online safety." />
+      </Head>
       <Navbar />
-      
       
       <section className="hero bg-gradient-to-b from-black to-gray-900 min-h-screen flex flex-col justify-center items-center text-center text-white py-10">
         <h1 className="text-5xl font-extrabold mb-6 text-orange-400">Welcome to Cyber Smart Community</h1>

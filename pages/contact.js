@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar';
+import Footer from './footer';
 
 export default function Contact() {
   return (
@@ -17,6 +18,7 @@ export default function Contact() {
 
         <button type="submit">Send</button>
       </form>
+      <Footer />
     </div>
   );
 }
