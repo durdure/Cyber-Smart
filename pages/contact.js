@@ -27,8 +27,16 @@ export default function Contact() {
 
   return (
     <section className="bg-gradient-to-b from-black to-gray-900 min-h-screen text-white py-10">
-      <div className="container mx-auto px-4 text-center">
-        <Navbar />
+      <Navbar />
+      
+    <div className="container mx-auto px-4 text-center"
+      style={
+        {
+          marginBottom: '10px',
+        }
+      }
+      >
+        
         <h1 className="text-4xl font-extrabold mb-6 text-orange-400">Contact Us</h1>
         <p className="text-lg mb-12 text-gray-400">
           We’d love to hear from you! Fill out the form below to get in touch.
