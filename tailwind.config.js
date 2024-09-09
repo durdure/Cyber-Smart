@@ -8,10 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'neon-blue': '#00f6ff',
+        'neon-pink': '#ff00e6',
       },
-    },
+      boxShadow: {
+        'neon': '0 0 10px #00f6ff, 0 0 20px #00f6ff, 0 0 40px #00f6ff',
+      }
+    }
   },
   plugins: [],
 };
