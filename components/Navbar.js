@@ -11,8 +11,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0  w-[90%] mx-auto bg-gradient-to-b from-orange-900 to-black p-4 shadow-2xl border-b border-orange-500 z-50 mt-6 h-15 rounded-lg ">
-      <div className="container mx-auto flex justify-between items-center h-10 p-0" >
+    <nav className="fixed top-0 w-[90%] mx-auto bg-gradient-to-b from-orange-900 to-black p-4 shadow-2xl border-b border-orange-500 z-50 rounded-lg mt-5" >
+      <div className="flex justify-between items-center w-full" >
         <div className="flex items-center space-x-2">
           <Image src={logo} alt="Cyber Smart Logo" width={50} height={50} />
           <span className="text-white font-extrabold text-2xl tracking-widest">

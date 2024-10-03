@@ -7,10 +7,10 @@ import Footer from './footer';
 
 export default function About() {
   const values = [
-    { text: "Integrity", image: "https://i.pinimg.com/564x/21/37/08/213708625b5eab4467f7bf8643257ff6.jpg" }, 
-    { text: "Community Engagement", image: "https://i.pinimg.com/736x/0c/e0/c3/0ce0c3b769fc3207ef711e254c342758.jpg" }, 
-    { text: "Continuous Learning", image: "https://example.com/image3.jpg" },
-    { text: "Inclusivity", image: "https://i.pinimg.com/564x/2f/31/84/2f31844f1b06b2d82bc48e6ef9620003.jpg" }, 
+    { text: "Integrity", image: "https://i.pinimg.com/564x/bc/ed/07/bced075dd9a8a25a025e598bb8e8c3a8.jpg" }, 
+    { text: "Community Engagement", image: "https://i.pinimg.com/564x/bc/ed/07/bced075dd9a8a25a025e598bb8e8c3a8.jpg" }, 
+    { text: "Continuous Learning", image: "https://i.pinimg.com/564x/bc/ed/07/bced075dd9a8a25a025e598bb8e8c3a8.jpg" },
+    { text: "Inclusivity", image: "https://i.pinimg.com/564x/bc/ed/07/bced075dd9a8a25a025e598bb8e8c3a8.jpg" }, 
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
