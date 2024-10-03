@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import logo from './cyberSmartLogo.png';
 import { useState } from 'react';
 
 export default function Navbar() {
@@ -10,10 +11,10 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-gradient-to-b from-orange-900 to-black p-6 md:p-4 shadow-2xl border-b border-orange-500 mb-4 w-full">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className="fixed top-0  w-[90%] mx-auto bg-gradient-to-b from-orange-900 to-black p-4 shadow-2xl border-b border-orange-500 z-50 mt-6 h-15 rounded-lg ">
+      <div className="container mx-auto flex justify-between items-center h-10 p-0" >
         <div className="flex items-center space-x-2">
-          <Image src="/cyber.jpg" alt="Cyber Smart Logo" width={50} height={50} />
+          <Image src={logo} alt="Cyber Smart Logo" width={50} height={50} />
           <span className="text-white font-extrabold text-2xl tracking-widest">
             Cyber Smart
           </span>
@@ -27,7 +28,7 @@ export default function Navbar() {
             {isOpen ? 'Close' : 'Menu'}
           </button>
         </div>
-        <ul className={`flex-col md:flex md:flex-row ${isOpen ? 'flex' : 'hidden'} md:space-x-8`}>
+        <ul className={`flex-col  md:flex md:flex-row ${isOpen ? 'flex' : 'hidden'} md:space-x-8`}>
           {['/', '/about', '/volunteer', '/social', '/contact'].map((path, index) => {
             const labels = ['Home', 'About', 'Volunteer', 'Social Media', 'Contact'];
             return (
