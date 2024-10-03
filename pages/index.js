@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar';
 import Footer from './footer';
 import Head from 'next/head';
+
 export default function Home() {
   return (
     <div>
@@ -8,9 +9,9 @@ export default function Home() {
         <title>Cyber Smart Community</title>
         <meta name="description" content="Empowering individuals through digital literacy and online safety." />
       </Head>
-      <Navbar />
       
       <section className="hero bg-gradient-to-b from-black to-gray-900 min-h-screen flex flex-col justify-center items-center text-center text-white py-10">
+        <Navbar />
         <h1 className="text-5xl font-extrabold mb-6 text-orange-400">Welcome to Cyber Smart Community</h1>
         <p className="text-lg mb-12 text-gray-400">
           Join us in promoting digital literacy and empowerment.
@@ -20,7 +21,6 @@ export default function Home() {
         </a>
       </section>
 
-     
       <section className="about bg-gray-800 text-white py-20">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">About Us</h2>
@@ -33,23 +33,22 @@ export default function Home() {
         </div>
       </section>
 
-    
       <section className="services bg-gray-900 text-white py-20">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Our Services</h2>
           <p className="text-lg mb-12 text-gray-300">
             We offer various programs and workshops to enhance digital skills.
           </p>
-          <div className="flex justify-center space-x-10">
-            <div className="service-item">
+          <div className="flex flex-wrap justify-center space-x-10 space-y-10 md:space-y-0">
+            <div className="service-item mb-4">
               <h3 className="text-2xl font-semibold mb-2">Workshops</h3>
               <p className="text-gray-400">Interactive sessions on digital literacy.</p>
             </div>
-            <div className="service-item">
+            <div className="service-item mb-4">
               <h3 className="text-2xl font-semibold mb-2">Webinars</h3>
               <p className="text-gray-400">Online seminars on safe internet practices.</p>
             </div>
-            <div className="service-item">
+            <div className="service-item mb-4">
               <h3 className="text-2xl font-semibold mb-2">Community Events</h3>
               <p className="text-gray-400">Engaging events to spread awareness.</p>
             </div>
@@ -57,7 +56,6 @@ export default function Home() {
         </div>
       </section>
 
-    
       <section className="contact bg-gray-800 text-white py-20">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Get in Touch</h2>
