@@ -11,23 +11,30 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 w-[90%] mx-auto bg-gradient-to-b from-orange-900 to-black p-4 shadow-2xl border-b border-orange-500 z-50 rounded-lg mt-5" >
-      <div className="flex justify-between items-center w-full" >
+    <nav className="fixed top-0 w-[80%] mx-auto bg-gradient-to-b from-orange-900 to-black p-4 shadow-2xl border-b border-orange-500 z-50 rounded-lg mt-10 h-[6%]" ><div className="flex items-center md:hidden">
+    <button
+      onClick={toggleMenu}
+      className="text-orange-400 focus:outline-none"
+    >
+
+      {isOpen ? 'Close' : 'Menu'}
+    </button>
+  </div>
+      <div className="flex justify-between items-center w-full" 
+      style={
+        {
+          marginTop: "-15px",
+        }
+      }
+      
+      >
         <div className="flex items-center space-x-2">
-          <Image src={logo} alt="Cyber Smart Logo" width={50} height={50} />
+          <Image src={logo} alt="Cyber Smart Logo" width={45} height={45} />
           <span className="text-white font-extrabold text-2xl tracking-widest">
             Cyber Smart
           </span>
         </div>
-        <div className="flex items-center md:hidden">
-          <button
-            onClick={toggleMenu}
-            className="text-orange-400 focus:outline-none"
-          >
-
-            {isOpen ? 'Close' : 'Menu'}
-          </button>
-        </div>
+       
         <ul className={`flex-col  md:flex md:flex-row ${isOpen ? 'flex' : 'hidden'} md:space-x-8`}>
           {['/', '/about', '/volunteer', '/social', '/contact'].map((path, index) => {
             const labels = ['Home', 'About', 'Volunteer', 'Social Media', 'Contact'];
@@ -39,7 +46,16 @@ export default function Navbar() {
               </li>
             );
           })}
-        </ul>
+        </ul> 
+        <div className="flex items-center md:hidden">
+          <button
+            onClick={toggleMenu}
+            className="text-orange-400 focus:outline-none"
+          >
+
+            {isOpen ? 'Close' : 'Menu'}
+          </button>
+        </div>
       </div>
     </nav>
   );

@@ -1,6 +1,6 @@
 import Navbar from '@/components/Navbar';
 import { FaTelegramPlane, FaInstagram, FaTiktok } from 'react-icons/fa';
-import Footer from './footer';
+import Footer from './Footer';
 
 const socialLinks = [
   {

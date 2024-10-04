@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
+import Footer from './Footer';
 
 const Slideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -104,8 +105,14 @@ const AboutUs = () => {
             </p>
             
             <h3 className="text-2xl font-semibold mb-4">Our Values</h3>
-            <ul className="list-disc list-inside text-gray-400 mb-4">
-              <li>Empowerment: We empower individuals through education.</li>
+            <ul className="list-disc list-inside text-gray-400 mb-4 decoration-none">
+              <li
+              style={
+                {
+                  style:"none"
+                }
+              }
+              >Empowerment: We empower individuals through education.</li>
               <li>Inclusivity: We welcome everyone, regardless of background.</li>
               <li>Community: We foster a supportive community for all.</li>
             </ul>
@@ -120,6 +127,29 @@ const AboutUs = () => {
     </section>
   );
 };
+
+const TeamMember = ()=>{
+ const team = [
+    {
+      name: "Alice Johnson",
+      role: "Founder & CEO",
+      image: "/team-member1.jpg",
+      description: "Alice is passionate about digital literacy and has over 10 years of experience in the tech industry."
+    },
+    {
+      name: "Bob Smith",
+      role: "CTO",
+      image: "/team-member2.jpg",
+      description: "Bob leads our technical team and ensures our programs are up to date with the latest technologies."
+    },
+    {
+      name: "Catherine Lee",
+      role: "Program Director",
+      image: "/team-member3.jpg",
+      description: "Catherine oversees all our workshops and community events to promote digital skills."
+    },
+  ]
+}
 
 export default function Home() {
   return (
@@ -218,17 +248,101 @@ export default function Home() {
 
       <Slideshow />
 
-      <section className="contact bg-gray-800 text-white py-20">
+       {/* <section className="team bg-gray-900 text-white py-20">
+      <div className="container mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-6">Meet Our Team</h2>
+        <p className="text-lg mb-12 text-gray-300">
+          Our dedicated team is committed to empowering individuals through education and support.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {team.map((member, index) => (
+            <div key={index} className="team-member bg-gray-800 p-6 rounded-lg shadow-lg">
+              <img src={member.image} alt={member.name} className="rounded-full w-32 h-32 mx-auto mb-4" />
+              <h3 className="text-2xl font-semibold mb-2">{member.name}</h3>
+              <p className="text-gray-400 mb-2">{member.role}</p>
+              <p className="text-gray-300">{member.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section> */}
+
+       <section className="contact bg-gray-800 text-white py-20">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Get in Touch</h2>
           <p className="text-lg mb-12 text-gray-300">
             We would love to hear from you! Reach out to us for any inquiries.
           </p>
-          <a href="/contact" className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">
-            Contact Us
-          </a>
+
+          <div className="flex flex-col md:flex-row justify-center mb-12">
+            <div className="md:w-1/2 p-4">
+              <h3 className="text-2xl font-semibold mb-4">Contact Form</h3>
+              <form className="bg-gray-900 p-6 rounded-lg shadow-lg">
+                <div className="mb-4">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="w-full p-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-orange-500"
+                    required
+                  />
+                </div>
+                <div className="mb-4">
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    className="w-full p-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-orange-500"
+                    required
+                  />
+                </div>
+                <div className="mb-4">
+                  <textarea
+                    placeholder="Your Message"
+                    className="w-full p-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-orange-500"
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            <div className="md:w-1/2 p-4">
+              <h3 className="text-2xl font-semibold mb-4">Contact Details</h3>
+              <p className="text-gray-400 mb-2">Phone: (123) 456-7890</p>
+              <p className="text-gray-400 mb-2">Email: info@cybersmartcommunity.org</p>
+              <p className="text-gray-400 mb-2">Address: 123 Cyber St, Tech City, CA 12345</p>
+              
+              <h3 className="text-2xl font-semibold mt-8 mb-4">Follow Us</h3>
+              <div className="flex justify-center space-x-4">
+                <a href="#" className="text-gray-400 hover:text-white transition duration-300">Facebook</a>
+                <a href="#" className="text-gray-400 hover:text-white transition duration-300">Twitter</a>
+                <a href="#" className="text-gray-400 hover:text-white transition duration-300">LinkedIn</a>
+                <a href="#" className="text-gray-400 hover:text-white transition duration-300">Instagram</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 mb-12">
+            <h3 className="text-2xl font-semibold mb-4">Find Us Here</h3>
+            <div className="max-w-md mx-auto">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509176!2d144.95373531531728!3d-37.81720997975159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f5b9e5f%3A0x5045675218ce6b0!2sCyber%20Smart%20Community!5e0!3m2!1sen!2sus!4v1665113521291!5m2!1sen!2sus"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
         </div>
       </section>
+      <Footer/>
     </div>
   );
 }

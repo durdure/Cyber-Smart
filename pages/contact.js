@@ -1,5 +1,5 @@
 import Navbar from '@/components/Navbar';
-import Footer from './footer';
+import Footer from './Footer';
 import { useState } from 'react';
 
 export default function Contact() {
