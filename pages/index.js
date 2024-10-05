@@ -248,24 +248,7 @@ export default function Home() {
 
       <Slideshow />
 
-       {/* <section className="team bg-gray-900 text-white py-20">
-      <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-6">Meet Our Team</h2>
-        <p className="text-lg mb-12 text-gray-300">
-          Our dedicated team is committed to empowering individuals through education and support.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {team.map((member, index) => (
-            <div key={index} className="team-member bg-gray-800 p-6 rounded-lg shadow-lg">
-              <img src={member.image} alt={member.name} className="rounded-full w-32 h-32 mx-auto mb-4" />
-              <h3 className="text-2xl font-semibold mb-2">{member.name}</h3>
-              <p className="text-gray-400 mb-2">{member.role}</p>
-              <p className="text-gray-300">{member.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section> */}
+       
 
        <section className="contact bg-gray-800 text-white py-20">
         <div className="container mx-auto text-center">
