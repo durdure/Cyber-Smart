@@ -11,7 +11,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 w-[80%] mx-auto bg-gradient-to-b from-orange-900 to-black p-4 shadow-2xl border-b border-orange-500 z-50 rounded-lg mt-10 h-[6%]" >
+    <nav className='fixed top-0 w-[80%] mx-auto bg-gradient-to-b from-orange-900 to-black p-4 shadow-2xl border-b border-orange-500 z-50 rounded-lg mt-10 ${isOpen ? "h-auto" : "h-[6%]"}' >
     <div className="flex items-center md:hidden">
     <div className="flex justify-between items-center w-full" 
       style={
@@ -21,8 +21,11 @@ export default function Navbar() {
       }
       
       >
-        <div className="flex items-center space-x-2">
-          <Image src={logo} alt="Cyber Smart Logo" width={45} height={45} />
+        <div className="flex items-center justify-center  space-x-2">
+          <Image src={logo} alt="Cyber Smart Logo" width={45} height={45}
+          
+           className="rounded-full shadow-lg transition-transform duration-300 hover:scale-110 mt-2" 
+          />
           <span className="text-white font-extrabold text-2xl tracking-widest">
             Cyber Smart
           </span>
@@ -45,7 +48,7 @@ export default function Navbar() {
             onClick={toggleMenu}
             className="text-orange-400 focus:outline-none"
           >
-            {isOpen ? 'Close' : 'Menu'}
+            {isOpen ? '✖' : '☰'}
           </button>
         </div>
       </div>
