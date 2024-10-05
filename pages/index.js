@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from './Footer';
+import Head from 'next/head';
 
 const Slideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -153,7 +154,13 @@ const TeamMember = ()=>{
 
 export default function Home() {
   return (
+
     <div>
+      <Head>
+        <title>
+          Ethio Cyber Smart
+        </title>
+      </Head>
       <section className="hero bg-gradient-to-b from-black to-gray-900 min-h-screen flex flex-col justify-center items-center text-center text-white relative overflow-hidden">
         <div className="absolute inset-0">
           <img src="https://i.pinimg.com/564x/bc/ed/07/bced075dd9a8a25a025e598bb8e8c3a8.jpg" alt="Digital Literacy Background" className="w-full h-full object-cover opacity-40" />
