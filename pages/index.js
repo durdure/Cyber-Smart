@@ -2,6 +2,10 @@ import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from './Footer';
 import Head from 'next/head';
+import Discus1 from './assets/discus.jpg';
+import Discus2 from './assets/discus2.jpg';
+import Discus3 from './assets/discus3.jpg';
+import Discus4 from './assets/discus4.jpg';
 
 const Slideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -12,19 +16,19 @@ const Slideshow = () => {
       id: 1,
       title: "Advanced Web Development",
       description: "Master the latest technologies to build dynamic websites.",
-      image: "https://i.pinimg.com/564x/bc/ed/07/bced075dd9a8a25a025e598bb8e8c3a8.jpg",
+      image: "https://i.pinimg.com/236x/63/77/e8/6377e83dfb1ef72285cdd96f7ae7d6dc.jpg",
     },
     {
       id: 2,
       title: "Digital Marketing Strategies",
       description: "Learn how to effectively promote your website.",
-      image: "https://i.pinimg.com/564x/73/78/c4/7378c49d7c4e608643263f0bf455fc31.jpg", 
+      image: "https://i.pinimg.com/236x/ab/2f/f4/ab2ff457b868fbf8754b9fe5145320b0.jpg", 
     },
     {
       id: 3,
       title: "E-commerce Solutions",
       description: "Set up and manage your online store.",
-      image: "https://i.pinimg.com/564x/73/78/c4/7378c49d7c4e608643263f0bf455fc31.jpg",
+      image: "https://i.pinimg.com/236x/2c/d1/6f/2cd16fa1419ab0ad3f7808947c431a4b.jpg",
     },
   ];
 
@@ -179,7 +183,7 @@ export default function Home() {
           </div>
 
           <a href="/volunteer" className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-3 px-6 rounded transition duration-300 ease-in-out shadow-lg">
-            Become a Volunteer
+            Learn More
           </a>
         </div>
 

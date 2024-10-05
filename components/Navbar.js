@@ -11,16 +11,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 w-[80%] mx-auto bg-gradient-to-b from-orange-900 to-black p-4 shadow-2xl border-b border-orange-500 z-50 rounded-lg mt-10 h-[6%]" ><div className="flex items-center md:hidden">
-    <button
-      onClick={toggleMenu}
-      className="text-orange-400 focus:outline-none"
-    >
-
-      {isOpen ? 'Close' : 'Menu'}
-    </button>
-  </div>
-      <div className="flex justify-between items-center w-full" 
+    <nav className="fixed top-0 w-[80%] mx-auto bg-gradient-to-b from-orange-900 to-black p-4 shadow-2xl border-b border-orange-500 z-50 rounded-lg mt-10 h-[6%]" >
+    <div className="flex items-center md:hidden">
+    <div className="flex justify-between items-center w-full" 
       style={
         {
           marginTop: "-15px",
@@ -35,7 +28,7 @@ export default function Navbar() {
           </span>
         </div>
        
-        <ul className={`flex-col  md:flex md:flex-row ${isOpen ? 'flex' : 'hidden'} md:space-x-8`}>
+        <ul className={`flex-col  md:flex md:flex-row ${isOpen ? 'flex' : 'hidden'} md:space-x-8` }>
           {['/', '/about', '/volunteer', '/social', '/contact'].map((path, index) => {
             const labels = ['Home', 'About', 'Volunteer', 'Social Media', 'Contact'];
             return (
@@ -52,11 +45,12 @@ export default function Navbar() {
             onClick={toggleMenu}
             className="text-orange-400 focus:outline-none"
           >
-
             {isOpen ? 'Close' : 'Menu'}
           </button>
         </div>
       </div>
+  </div>
+      
     </nav>
   );
 }
